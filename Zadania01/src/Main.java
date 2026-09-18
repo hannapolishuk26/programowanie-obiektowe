@@ -43,7 +43,6 @@ public class Main {
         String slowo3 = scanner.nextLine();
         System.out.println(slowo3 + " , " + slowo2 + " , " + slowo1);
         //zad7
-
         //zad8
         int x = 5;
         int y = 2;
@@ -53,5 +52,11 @@ public class Main {
         System.out.println("Podaj slowo: ");
         String word = scanner.nextLine();
         System.out.println("Tekst wilekimi literami: " + word.toUpperCase());
+
+        //zad10
+        System.out.println("Podaj promień kola: ");
+        int r = scanner.nextInt();
+        double polekola = Math.PI * r * r;
+        System.out.println("Pole kola rowna się: " + polekola);
     }
 }
