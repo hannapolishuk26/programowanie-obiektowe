@@ -33,6 +33,16 @@ public class Main {
         double c = scanner.nextDouble();
         double obwod = a + b + c;
         System.out.println("Obwod trojkata wynosi: " + obwod);
+        //zad6
+        System.out.println("Podaj pierwsze slowo");
+        String slowo1 = scanner.nextLine();
+        System.out.println("Podaj drugie slowo");
+        String slowo2 = scanner.nextLine();
+        System.out.println("Podaj trzecie slowo");
+        String slowo3 = scanner.nextLine();
+        System.out.println(slowo3 + " " + slowo2 + " " + slowo1);
+
+
 
 
     }
