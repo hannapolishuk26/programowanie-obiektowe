@@ -24,5 +24,16 @@ public class Main {
         stopnie = scanner.nextDouble();
         double fahrenheit = 1.8 * stopnie + 32.0;
         System.out.println("Temperatura w stopniach Fahrenheita: " + fahrenheit);
+        //zad5
+        System.out.println("Podaj pierwszy bok trójkąta");
+        double a = scanner.nextDouble();
+        System.out.println("Podaj drugi bok trójkąta");
+        double b = scanner.nextDouble();
+        System.out.println("Podaj trzeci bok trójkąta");
+        double c = scanner.nextDouble();
+        double obwod = a + b + c;
+        System.out.println("Obwod trojkata wynosi: " + obwod);
+
+
     }
 }
