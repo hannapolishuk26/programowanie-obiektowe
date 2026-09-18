@@ -43,6 +43,9 @@ public class Main {
         String slowo3 = scanner.nextLine();
         System.out.println(slowo3 + " , " + slowo2 + " , " + slowo1);
         //zad7
+        System.out.println("Podaj dowolny wyraz");
+        String wyraz = scanner.nextLine();
+        System.out.println("Liczba znaków: " + wyraz.length());
         //zad8
         int x = 5;
         int y = 2;
