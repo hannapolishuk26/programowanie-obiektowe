@@ -61,5 +61,6 @@ public class Main {
         int r = scanner.nextInt();
         double polekola = Math.PI * r * r;
         System.out.println("Pole kola rowna się: " + polekola);
+        scanner.close();
     }
 }
