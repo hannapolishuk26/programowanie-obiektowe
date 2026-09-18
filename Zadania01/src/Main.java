@@ -40,7 +40,7 @@ public class Main {
         String slowo2 = scanner.nextLine();
         System.out.println("Podaj trzecie slowo");
         String slowo3 = scanner.nextLine();
-        System.out.println(slowo3 + " " + slowo2 + " " + slowo1);
+        System.out.println(slowo3 + " , " + slowo2 + " , " + slowo1);
 
 
 
