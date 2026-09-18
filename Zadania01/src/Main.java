@@ -41,9 +41,13 @@ public class Main {
         System.out.println("Podaj trzecie slowo");
         String slowo3 = scanner.nextLine();
         System.out.println(slowo3 + " , " + slowo2 + " , " + slowo1);
+        //zad7
 
-
-
-
+        //zad8
+        int x = 5;
+        int y = 2;
+        double wynik = (double) x / y;
+        System.out.println("Wyhik wynosi: " + wynik);
+        
     }
 }
