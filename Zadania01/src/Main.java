@@ -1,3 +1,4 @@
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Main {
@@ -48,6 +49,9 @@ public class Main {
         int y = 2;
         double wynik = (double) x / y;
         System.out.println("Wyhik wynosi: " + wynik);
-        
+        //zad9
+        System.out.println("Podaj slowo: ");
+        String word = scanner.nextLine();
+        System.out.println("Tekst wilekimi literami: " + word.toUpperCase());
     }
 }
