@@ -33,10 +33,27 @@ public class Main {
         int y = scanner.nextInt();
         if(x > y){
             System.out.println(x);
-        }33
+        }
         else{
             System.out.println(y);
         }
+
+        //zad4
+        System.out.println("Podaj pierwsza liczbę");
+        int d = scanner.nextInt();
+        System.out.println("Podaj druga liczbe");
+        int e = scanner.nextInt();
+        System.out.println("Podaj trzecia liczbe");
+        int f = scanner.nextInt();
+        int najwieksza = d;
+
+        if (e > najwieksza) {
+            najwieksza = e;
+        }
+        if (f > najwieksza) {
+            najwieksza = f;
+        }
+        System.out.println("Najwiekszą liczbą jest: " + najwieksza);
         scanner.close();
     }
 }
