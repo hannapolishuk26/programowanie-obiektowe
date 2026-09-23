@@ -25,6 +25,18 @@ public class Main {
         } else {
             System.out.println("Nie można zbudować trójkąta.");
         }
+
+        //zad3
+        System.out.println("Podaj pierwszą liczbe");
+        int x = scanner.nextInt();
+        System.out.println("Podaj druga liczbe");
+        int y = scanner.nextInt();
+        if(x > y){
+            System.out.println(x);
+        }33
+        else{
+            System.out.println(y);
+        }
         scanner.close();
     }
 }
