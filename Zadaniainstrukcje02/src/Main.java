@@ -39,21 +39,21 @@ public class Main {
         }
 
         //zad4
-        System.out.println("Podaj pierwsza liczbę");
-        int d = scanner.nextInt();
+        System.out.println("Podaj pierwsza liczbe");
+        int num1 = scanner.nextInt();
         System.out.println("Podaj druga liczbe");
-        int e = scanner.nextInt();
+        int num2 = scanner.nextInt();
         System.out.println("Podaj trzecia liczbe");
-        int f = scanner.nextInt();
-        int najwieksza = d;
+        int num3 = scanner.nextInt();
+        int najwieksza = num1;
+        if(num2 > najwieksza){
+            najwieksza = num2;
+        }
+        if(num3 > najwieksza){
+            najwieksza = num3;
+        }
+        System.out.println("Nakwiekszą liczbą jest: " + najwieksza);
 
-        if (e > najwieksza) {
-            najwieksza = e;
-        }
-        if (f > najwieksza) {
-            najwieksza = f;
-        }
-        System.out.println("Najwiekszą liczbą jest: " + najwieksza);
         scanner.close();
     }
 }
