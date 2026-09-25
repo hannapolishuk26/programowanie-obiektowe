@@ -134,6 +134,34 @@ public class Main {
         }else{
             System.out.println("nadwaga");
         }
+        //zad10
+        System.out.println("Podaj cenę towaru");
+        double cena = scanner.nextDouble();
+        if (cena < 100 || cena > 10000) {
+            System.out.println("Podana cena jest poza zakresem (100 - 10000 zł). Zmień dane");
+        }
+        System.out.println("Podaj liczba rat");
+        int liczbaRat = scanner.nextInt();
+        if(liczbaRat < 6 || liczbaRat > 48){
+            System.out.println("Liczba rat jest poza zakresem (6 - 48). Zmien dane");
+        }
+        double oprocentowanie = 0.0;
+        if(liczbaRat >= 6 && liczbaRat <= 12){
+            oprocentowanie = 0.025;
+        } else if (liczbaRat >= 13 && liczbaRat <= 24) {
+            oprocentowanie = 0.05;
+        } else if (liczbaRat >= 25 && liczbaRat <=48) {
+            oprocentowanie = 0.10;
+        }
+        double odsetki = cena * oprocentowanie;
+        double lacznaKwota = cena + odsetki;
+        double miesiecznaRata = lacznaKwota / liczbaRat;
+
+        System.out.println("Cena: " + cena);
+        System.out.println("Liczba rat:" + liczbaRat);
+        System.out.println("Oprocentowanie:"+ (oprocentowanie * 100));
+        System.out.println("Kwota odsetek: " + odsetki);
+        System.out.println("Miesięczna rata: " + miesiecznaRata);
 
         scanner.close();
     }
