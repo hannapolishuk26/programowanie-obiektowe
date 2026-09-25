@@ -107,6 +107,11 @@ public class Main {
         } else {
             System.out.println("Mamy różne imiona");
         }
+        //zad7
+        System.out.println("Podaj swoj wiek");
+        int age = scanner.nextInt();
+        boolean czyPelnoletniaos = (age >= 18) ? true : false;
+        System.out.println(czyPelnoletniaos);
         scanner.close();
     }
 }
