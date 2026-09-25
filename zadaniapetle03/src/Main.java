@@ -31,8 +31,19 @@ public class Main {
         int potega = 1;
         while(potega <= n){
             System.out.println(potega);
-            potega = potega * 2
+            potega = potega * 2;
         }
+        //zad3
+        int suma = 0;
+        int liczba;
+        System.out.println("Podawaj liczby całkowite (wpisanie 0 kończy program):");
+        do{
+            System.out.println("Podaj liczbę: ");
+            liczba = scanner.nextInt();
+
+            suma += liczba;
+        }while(liczba !=0);
+        System.out.println("Suma wszystkich podanych liczb wynosi: " + suma);
         scanner.close();
     }
 }
