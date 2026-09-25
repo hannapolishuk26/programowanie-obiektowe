@@ -163,6 +163,43 @@ public class Main {
         System.out.println("Kwota odsetek: " + odsetki);
         System.out.println("Miesięczna rata: " + miesiecznaRata);
 
+        //zad11
+        System.out.println("Prosty kalkulator liczb rzeczywistych");
+        System.out.println("Podaj pierwszą liczbę");
+        double liczba1 = scanner.nextDouble();
+        System.out.println("Podaj symbol operacji: +, -, *, /.");
+        char znak = scanner.next().charAt(0);
+        System.out.println("Podaj drugą liczbę");
+        double liczba2 = scanner.nextDouble();
+        double wynik = 0;
+        boolean blad = false;
+
+        switch (znak) {
+            case '+':
+                wynik = liczba1 + liczba2;
+                break;
+            case '-':
+                wynik = liczba1 - liczba2;
+                break;
+            case '*':
+                wynik = liczba1 * liczba2;
+                break;
+            case '/':
+                if (liczba2 == 0) {
+                    System.out.println("Błąd, nie można dzielić przez 0");
+                    blad = true;
+                } else {
+                    wynik = liczba1 / liczba2;
+                }
+                break;
+            default:
+                System.out.println("Niepoprawny symbol operacji");
+                blad = true;
+                break;
+        }
+        if (!blad) {
+            System.out.println("Wynik działania: " + wynik);
+        }
         scanner.close();
     }
 }
