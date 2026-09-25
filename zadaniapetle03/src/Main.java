@@ -15,6 +15,18 @@ public class Main {
                 System.out.println(i);
             }
         }
+
+        //zad2
+        System.out.println("Podaj dodatnią liczbę całkowitą");
+        int m = scanner.nextInt();
+        if(m <= 0){
+            System.out.println("liczba nusi być dodatnia");
+        }else{
+            System.out.println("Liczby nieparzyste nie większe od " + m + ":");
+        }
+        for (int i = 1; i <= m; i *= 2) {
+            System.out.println(i);
+        }
         scanner.close();
     }
 }
