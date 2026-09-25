@@ -1,13 +1,20 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-void main() {
-    //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-    // to see how IntelliJ IDEA suggests fixing it.
-    IO.println(String.format("Hello and welcome!"));
-
-    for (int i = 1; i <= 5; i++) {
-        //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-        // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-        IO.println("i = " + i);
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        //zad1
+        System.out.print("Podaj dodatnią liczbę całkowitą: ");
+        int n = scanner.nextInt();
+        if(n <= 0){
+            System.out.println("liczba nusi być dodatnia");
+        }else{
+            System.out.println("Liczby nieparzyste nie większe od " + n + ":");
+        }
+        for(int i = 1; i <= n; i++){
+            if(i % 2 != 0){
+                System.out.println(i);
+            }
+        }
+        scanner.close();
     }
 }
