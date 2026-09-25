@@ -54,6 +54,59 @@ public class Main {
         }
         System.out.println("Nakwiekszą liczbą jest: " + najwieksza);
 
+        //zad5
+        System.out.println("Podaj numer miesiąca");
+        int month = scanner.nextInt();
+        switch (month){
+            case 1:
+                System.out.println("Styczen");
+                break;
+            case 2:
+                System.out.println("Luty");
+                break;
+            case 3:
+                System.out.println("Marzec");
+                break;
+            case 4:
+                System.out.println("Kwiecien");
+                break;
+            case 5:
+                System.out.println("Maj");
+                break;
+            case 6:
+                System.out.println("Czerwiec");
+                break;
+            case 7:
+                System.out.println("Lipiec");
+                break;
+            case 8:
+                System.out.println("Sierpień");
+                break;
+            case 9:
+                System.out.println("Wrzesien");
+                break;
+            case 10:
+                System.out.println("Pażdziernik");
+                break;
+            case 11:
+                System.out.println("Listopad");
+                break;
+            case 12:
+                System.out.println("Grudzien");
+                break;
+            default:
+                System.out.println("Nieprawidlowy numer miesiaca");
+                break;
+        }
+        //zad6
+        System.out.println("Podaj swoje imię");
+        String yname = scanner.nextLine();
+        String mname = "Hanna";
+        if (mname.equals(yname)) {
+            System.out.println("Mamy takie same imię");
+        } else {
+            System.out.println("Mamy różne imiona");
+        }
         scanner.close();
     }
 }
