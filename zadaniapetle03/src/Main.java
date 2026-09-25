@@ -27,6 +27,12 @@ public class Main {
         for (int i = 1; i <= m; i *= 2) {
             System.out.println(i);
         }
+        //lub
+        int potega = 1;
+        while(potega <= n){
+            System.out.println(potega);
+            potega = potega * 2
+        }
         scanner.close();
     }
 }
