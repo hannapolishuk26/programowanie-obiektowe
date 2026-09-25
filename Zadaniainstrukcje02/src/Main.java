@@ -121,7 +121,19 @@ public class Main {
         }else{
             System.out.println("Rok" + rok + " nie jest rokiem przestępnym");
         }
-
+        //zad9
+        System.out.println("Podaj swoją wagę");
+        double waga = scanner.nextDouble();
+        System.out.println("Podaj swój wzrost");
+        double wzrost = scanner.nextDouble();
+        double BMI = waga/(wzrost * wzrost);
+        if(BMI >= 18.5 && BMI <= 24.5){
+            System.out.println("waga prawidłowa");
+        } else if (BMI < 18.5) {
+            System.out.println("niedowaga");
+        }else{
+            System.out.println("nadwaga");
+        }
 
         scanner.close();
     }
