@@ -1,7 +1,9 @@
 import java.util.Scanner;
+import java.util.Random;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        Random random = new Random();
         //zad1
         System.out.print("Podaj dodatnią liczbę całkowitą: ");
         int n = scanner.nextInt();
@@ -70,7 +72,22 @@ public class Main {
             System.out.println("Średnia liczb: " + srednia);
         }else{
             System.out.println("Mie podano żadniej liczby(wpisano 0 jako pierwszą wartość");
-            scanner.close();
         }
+        //zad5
+        int wylosowanaliczba = random.nextInt(100) + 1;
+        int mojaliczba;
+        System.out.println("Komputer wylosował liczbę z zakresu 1...100. Spróbuj ją odgadnąć!");
+        do{
+            System.out.println("Podaj swoją liczbę");
+            mojaliczba = scanner.nextInt();
+            if(mojaliczba > wylosowanaliczba){
+                System.out.println("Podałeś za dużą wartość");
+            } else if (mojaliczba < wylosowanaliczba) {
+                System.out.println("Podałeś za małą wartość");
+            }else {
+                System.out.println("Gratulacje");
+            }
+        }while ((mojaliczba != wylosowanaliczba));
+        scanner.close();
     }
 }
