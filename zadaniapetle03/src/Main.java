@@ -111,6 +111,60 @@ public class Main {
                 System.out.print(znak);
             }
             System.out.println();
+            // Zadanie 7 - choinka
+        System.out.print("Podaj wysokosc choinki: ");
+        int n = scanner.nextInt();
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= n - i; j++) {
+                System.out.print(" ");
+            }
+            for (int j = 1; j <= 2 * i - 1; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+        // Zadanie 8 - silnia
+        System.out.print("Podaj liczbe: ");
+        int z = scanner.nextInt();
+        int silnia = 1;
+        for (int i = 1; i <= z; i++) {
+            silnia = silnia * i;
+        }
+        System.out.println("Silnia podanej liczby wynosi: " + silnia);
+
+        // Zadanie 9 - palindrom
+        scanner.nextLine(); // Usuniecie znaku konca linii
+        System.out.print("Podaj slowo: ");
+        String slowo = scanner.nextLine();
+        boolean palindrom = true;
+        for (int i = 0; i < slowo.length() / 2; i++) {
+            if (slowo.charAt(i) != slowo.charAt(slowo.length() - 1 - i)) {
+                palindrom = false;
+                break;
+            }
+        }
+        if (palindrom) {
+            System.out.println("To jest palindrom.");
+        } else {
+            System.out.println("To nie jest palindrom.");
+        }
+
+        // Zadanie 10 - continue z etykieta
+        glowna:
+        for (int i = 1; i <= 10; i++) {
+            if (i % 2 != 0) {
+                continue;
+            }
+            for (int j = 1; j <= 10; j++) {
+
+                if (j > i) {
+                    continue glowna;
+                }
+                System.out.print(j + " ");
+            }
+            System.out.println();
+        }
         }
         scanner.close();
     }
