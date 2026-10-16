@@ -1,4 +1,4 @@
-﻿
+
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
@@ -45,7 +45,27 @@ public class Main {
                     new StringBuilder(slowa[i]).reverse().toString();
             System.out.print(odwroconeSlowo + " ");
         }
-
+        //zad5
+        System.out.println("Podaj 8 liczb, a program zapisze je w tablicy: ");
+        int[] liczbysort = new int[8];
+        System.out.println("Podaj 8 liczb całkowitych:");
+        for (int i = 0; i < liczbysort.length; i++) {
+            System.out.print("Liczba " + (i + 1) + ": ");
+            liczbysort[i] = scanner.nextInt();
+        }
+        for (int i = 0; i < liczbysort.length - 1; i++) {
+            for (int j = 0; j < liczbysort.length - 1 - i; j++) {
+                if (liczbysort[j] > liczbysort[j + 1]) {
+                    int temp = liczbysort[j];
+                    liczbysort[j] = liczbysort[j + 1];
+                    liczbysort[j + 1] = temp;
+                }
+            }
+        }
+        for (int i = 0; i < liczbysort.length; i++) {
+            System.out.println(liczbysort[i]);
+        }
+        //zad6
         scanner.close();
     }
 }
