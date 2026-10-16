@@ -1,47 +1,51 @@
-﻿import static com.sun.tools.javac.util.StringUtils.toUpperCase;
+﻿
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        //zad1
-        int[] tablicaParzysta = {10, 20, 30, 40, 50, 60};
 
+        // zad1 - Co drugi element z tablic
+        int[] tablicaParzysta = {10, 20, 30, 40, 50, 60};
         String[] tablicaNieparzysta = {"Banan", "Jabłko", "Brzoskwinia"};
-        System.out.println("Co drugi element z tablicy parzystej (liczby):");
+        System.out.println("Co drugi element z tablicy liczb:");
         for (int i = 0; i < tablicaParzysta.length; i += 2) {
             System.out.println(tablicaParzysta[i]);
         }
-        System.out.println("Co drugi element z tablicy nieparzystej (teksty):");
+        System.out.println("Co drugi element z tablicy tekstowej:");
         for (int i = 0; i < tablicaNieparzysta.length; i += 2) {
             System.out.println(tablicaNieparzysta[i]);
         }
-        //zad2
-        int[] tablicaNajwiekszuel = {2, 6, 8, 1, 0, 5, 7, 11};
-        int max = tablicaNajwiekszuel[0];
+        // zad2 - Znajdowanie największego elementu
+        int[] tablicaNajwieksza = {2, 6, 8, 1, 0, 5, 7, 11};
+        int max = tablicaNajwieksza[0];
 
-        for(int i = 0; i < tablicaNajwiekszuel.length; i++ ){
-            if(tablicaNajwiekszuel[i] > max){
-                max = tablicaNajwiekszuel[i];
+        for (int i = 1; i < tablicaNajwieksza.length; i++) {
+            if (tablicaNajwieksza[i] > max) {
+                max = tablicaNajwieksza[i];
             }
-            System.out.println("Największy element tablicy: " + max);
         }
-        //zad3
-        String[] produkty = {"Mleko", "Chleb", "Pomodory", "Cukierki"};
-        for(String produkt : produkty){
+        System.out.println("Największy element tablicy: " + max);
+
+        // zad3 - Wyświetlanie produktów wielkimi literami
+        String[] produkty = {"Mleko", "Chleb", "Pomidory", "Cukierki"};
+        for (String produkt : produkty) {
             System.out.println(produkt.toUpperCase());
         }
-        //zad4
-        System.out.println("Podaj 5 słów i progra zapisze ich w tablicy");
-        String[] slowauzut = new String[5];
-        for(int i = 0; i < 5; i++ ){
+        // zad4 - Wczytywanie 5 słów i odwracanie ich kolejności
+        // oraz liter w każdym słowie
+        System.out.println("Podaj 5 słów, a program zapisze je w tablicy:");
+        String[] slowa = new String[5];
+        for (int i = 0; i < slowa.length; i++) {
             System.out.print("Słowo " + (i + 1) + ": ");
-            slowauzut[i] = scanner.next();
+            slowa[i] = scanner.next();
+        }
+        System.out.println("Słowa w odwrotnej kolejności, z odwróconymi literami:");
+        for (int i = slowa.length - 1; i >= 0; i--) {
+            String odwroconeSlowo =
+                    new StringBuilder(slowa[i]).reverse().toString();
+            System.out.print(odwroconeSlowo + " ");
         }
 
-        for (int i = 4; i >= 0; i--) {
-            String odwróconeSlowa = new StringBuilder(slowauzut[i]).reverse().toString();
-            System.out.print(odwróconeSlowa + " ");
-        }
-    scanner.close();
+        scanner.close();
     }
 }
