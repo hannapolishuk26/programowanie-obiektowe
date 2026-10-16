@@ -66,6 +66,20 @@ public class Main {
             System.out.println(liczbysort[i]);
         }
         //zad6
+        System.out.println("Podaj 5 liczb, a program obliczy silnię każdej z nich.");
+        int[] tabsilnia = new int[5];
+        for (int i = 0; i < tabsilnia.length; i++) {
+            System.out.print("Liczba " + (i + 1) + ": ");
+            tabsilnia[i] = scanner.nextInt();
+        }
+        for (int i = 0; i < tabsilnia.length; i++) {
+            int silnia = 1;
+
+            for (int j = 1; j <= tabsilnia[i]; j++) {
+                silnia = silnia * j;
+            }
+            System.out.println("Silnia z liczby " + tabsilnia[i] + " wynosi: " + silnia);
+        }
         scanner.close();
     }
 }
